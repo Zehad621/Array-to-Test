@@ -1,4 +1,4 @@
-[Array-to-Test
+Array-to-Test
 Memory Allocation Comparison: C++ vs Python
 Project Description
 This project demonstrates the different categories of memory allocation using arrays in C++ and Python:
@@ -67,28 +67,10 @@ More flexible but may have performance overhead.
 Used When: The size of the array is unknown or varies frequently during program execution.
 
 Each category is implemented using simple array programs in both languages to compare memory allocation techniques.
+| Category            | C++                      | Python         | Notes                                          |
+| ------------------- | ------------------------ | -------------- | ---------------------------------------------- |
+| Fixed Stack Dynamic | `int arr[5];`            | Not supported  | Python does not allow stack-level fixed arrays |
+| Stack Dynamic       | `int arr[n];` (GCC-only) | `arr = [0]*n`  | Python uses heap by default                    |
+| Fixed Heap Dynamic  | `new int[5]`             | `arr = [0]*5`  | Both fixed size, heap-allocated                |
+| Heap Dynamic        | `std::vector<int>`       | `arr.append()` | Native in Python; `vector` in C++              |
 
-Comparisons Between C++ and Python
-Category	C++ Code	Python Code
-Fixed Stack Dynamic	int arr[5];	arr = [1, 2, 3, 4, 5]
-Stack Dynamic	int arr[size]; (VLA)	arr = [i for i in range(size)]
-Fixed Heap Dynamic	int* arr = new int[5];	array.array('i', [...])
-Heap Dynamic	int* arr = new int[size];	arr = [i for i in range(size)]
-Key Differences
-C++ allows more fine-grained control over memory (stack vs heap) using pointers and new/delete.
-Python abstracts memory allocation using dynamic lists and built-in modules like array.
-Stack-based arrays are more evident in C++ while Python relies on heap-like dynamic lists for all cases.
-File Structure
-MemoryAllocationComparison/
-├── C++/
-│   ├── fixed_stack_dynamic.cpp
-│   ├── stack_dynamic.cpp
-│   ├── fixed_heap_dynamic.cpp
-│   └── heap_dynamic.cpp
-├── Python/
-│   ├── fixed_stack_dynamic.py
-│   ├── stack_dynamic.py
-│   ├── fixed_heap_dynamic.py
-│   └── heap_dynamic.py
-└── README.md
-](https://github.com/Prity409/Array-to-Test)
