@@ -1,0 +1,11 @@
+size = int(input("Enter the size of the array: "))
+arr = []
+
+print(f"Enter {size} elements:")
+for i in range(size):
+    value = int(input(f"Element {i}: "))
+    arr.append(value)
+
+print("Stack Dynamic Array in Python:")
+for i in range(size):
+    print(f"Element {i}: {arr[i]}")
