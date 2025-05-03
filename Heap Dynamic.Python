@@ -1,0 +1,12 @@
+arr = []
+
+n = int(input("Enter number of elements: "))
+
+print(f"Enter {n} elements:")
+for i in range(n):
+    value = int(input(f"Element {i}: "))
+    arr.append(value)  # Dynamic resizing
+
+print("Heap Dynamic Array in Python:")
+for i in range(len(arr)):
+    print(f"Element {i}: {arr[i]}")
