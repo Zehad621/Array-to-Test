@@ -30,7 +30,7 @@ Example (C++ with VLA):
 
 cpp Copy Edit int size;
 cin >> size;
-int arr[size]; // Variable-length array Behavior:
+int arr[size];
 
 Allocated on stack, but size is flexible.
 
