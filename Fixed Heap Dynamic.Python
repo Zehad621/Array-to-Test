@@ -1,0 +1,10 @@
+size = int(input("Enter the size of the array: "))
+arr = [0] * size  # Preallocate fixed-size list
+
+print(f"Enter {size} elements:")
+for i in range(size):
+    arr[i] = int(input(f"Element {i}: "))
+
+print("Fixed Heap Dynamic Array in Python:")
+for i in range(size):
+    print(f"Element {i}: {arr[i]}")
